@@ -1,0 +1,201 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background:rgb(17, 6, 37);
+}
+
+a{
+    color: aliceblue;
+    text-decoration: none; 
+}
+
+.navbar{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 20px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.navbar .logo{
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.navbar ul{
+    display: flex;
+}
+
+.navbar ul li{
+    list-style: none;
+    margin-left: 35px;
+    font-size: 10px;
+}
+
+.navbar ul li a{
+    font-size: 12%;
+    font-weight: 500;
+}
+
+.navbar ul li:hover a {
+    color:rgb(105, 205, 6);
+}
+
+.home{
+    display:flex;
+    align-items: center;
+    height: 5vh;
+    padding: 30% 10% 0;
+    color:white;
+    visibility: hidden;
+    opacity: 0;
+    animation: show-content 1.7s linear forwards;
+}
+
+.home-info h1{
+     font-size: 50px;  
+}
+
+.home-info h2{
+    display: inline-block;
+    font-size: 32px;
+    margin-top: 2%;
+}
+
+.home-info h2 span{
+    position: relative;
+    display: inline-block;
+    color: transparent;
+    -webkit-text-stroke: .7px chartreuse;
+    animation: display-text 16s linear infinite;
+    animation-delay: calc(-4s * var(--i));
+}
+@keyframes display-text {
+    25%,100%{
+        display: none;
+       
+    }
+    
+}
+
+.home-info h2 span::before {
+    content:attr(data-text) ;
+    position: absolute;
+    width: 0;
+    border-right: 2px solid chartreuse;
+    color: chartreuse;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: fill-text 4s linear infinite;
+}
+@keyframes fill-text {
+    10%,100%{
+        width: 0;
+    }
+    70%,90%{
+        width: 100%;
+    }
+    
+}
+
+
+.home-info p{
+    font-size: 16px;
+    margin:25px 0 35px;
+}
+
+.home-info .launch-soci{
+    display: flex;
+    align-items: center;
+}
+
+.launch{
+    display:inline-block;
+    padding: 10px 50px;
+    background-color:chartreuse;
+    border: chartreuse;
+    border-radius: 40px;
+    box-shadow: 0 0 10px chartreuse ;
+    font-size: 16px;
+    color: black;
+    font-weight: 700;
+
+}
+
+.launch:hover{
+    background: black;
+    color: chartreuse;
+    box-shadow: none;
+    transition: 0.3s;
+}
+
+.home-info .launch-soci .soci{
+    margin-left: 20px;    
+}
+
+.home-info .launch-soci .soci a{
+    display: inline-flex;
+    padding: 9px;
+    border: 2px solid chartreuse;
+    border-radius: 50%;
+    font-size: 20px;
+    margin: 3px 10px;
+}
+
+.home-info .launch-soci .soci a:hover{
+    background:chartreuse;
+    color: black;
+    transition: 0.3s; 
+}
+
+.home-img .img-box{
+    width: 23vw;
+    height: 23vw;
+    background-color: chartreuse;
+    border-radius: 50%; 
+    padding:5px; 
+    box-shadow: 0 0 10px chartreuse ; 
+}
+
+.home-img .img-box .img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color:rgb(17, 6, 37);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+
+}
+
+.home-img .img-box .img img{
+    position: absolute;
+    display: block;
+    top: 20px;
+    right: 10px;
+    width: 85%;
+    mix-blend-mode: lighten;
+}
+
+@keyframes show-content{
+    100%{
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
