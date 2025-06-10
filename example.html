@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Relative Units Test</title>
+  <style>
+    /* Width with px and % */
+    .container-px {
+      width: 600px;
+      background-color: lightcoral;
+      margin: 20px auto;
+      padding: 10px;
+      color: white;
+      text-align: center;
+    }
+
+    .container-percent {
+      width: 80%;
+      background-color: lightseagreen;
+      margin: 20px auto;
+      padding: 10px;
+      color: white;
+      text-align: center;
+    }
+
+    /* Font sizes comparison */
+    .font-test {
+      margin: 40px auto;
+      padding: 20px;
+      border: 1px solid #aaa;
+      width: 80%;
+    }
+
+    .font-px {
+      font-size: 18px;
+    }
+
+    .font-em {
+      font-size: 1.2em;
+    }
+
+    .font-rem {
+      font-size: 1.5rem;
+    }
+
+    /* Fullscreen section using vh and vw */
+    .fullscreen {
+      height: 100vh;
+      width: 100vw;
+      background-color: #333;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+    }
+  </style>
+</head>
+<body style="font-size: 16px;"> <!-- try changing root font size here -->
+
+  <div class="container-px">
+    <p>This container has a fixed width of 600px.</p>
+  </div>
+
+  <div class="container-percent">
+    <p>This container has a relative width of 80%.</p>
+  </div>
+
+  <div class="font-test">
+    <h2 class="font-px">This heading uses px (18px)</h2>
+    <h2 class="font-em">This heading uses em (1.2em)</h2>
+    <h2 class="font-rem">This heading uses rem (1.5rem)</h2>
+    <p>Change the root font size in the HTML tag to see how <code>em</code> and <code>rem</code> behave differently.</p>
+  </div>
+
+  <section class="fullscreen">
+    This section fills the entire viewport (100vh x 100vw).
+  </section>
+
+</body>
+</html>
